@@ -1,0 +1,20 @@
+program ConPariz;
+
+uses
+  Vcl.Forms,
+  Uprincipal in 'Uprincipal.pas' {frmPrincipal},
+  Vcl.Themes,
+  Vcl.Styles,
+  Conexao in 'datamodule\Conexao.pas' {dmDados: TDataModule},
+  UfrmCadastroBasico in 'view\UfrmCadastroBasico.pas' {frmCadastroBasico};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Windows10 SlateGray');
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TdmDados, dmDados);
+  Application.Run;
+end.

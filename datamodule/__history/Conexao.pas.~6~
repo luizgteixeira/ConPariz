@@ -1,0 +1,72 @@
+unit Conexao;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DBXMySQL, Datasnap.Provider, Data.DB,
+  Datasnap.DBClient, Data.SqlExpr, Data.FMTBcd;
+
+type
+  TdmDados = class(TDataModule)
+    ConPariz: TSQLConnection;
+    cdsUsuarios: TClientDataSet;
+    dspUsuarios: TDataSetProvider;
+    dsUsuarios: TSQLDataSet;
+    dsUsuariosid: TIntegerField;
+    sUsuariosnome: TStringField;
+    sUsuarioslogin: TStringField;
+    sUsuariossenha: TStringField;
+    sUsuariosstatus: TStringField;
+    dtfldUsuariosdt_cadastro: TDateField;
+    cdsUsuariosid: TIntegerField;
+    sUsuariosnome1: TStringField;
+    sUsuarioslogin1: TStringField;
+    sUsuariossenha1: TStringField;
+    sUsuariosstatus1: TStringField;
+    dtfldUsuariosdt_cadastro1: TDateField;
+    cdsContasPagar: TClientDataSet;
+    dspContasPagar: TDataSetProvider;
+    dsContasPagar: TSQLDataSet;
+    cdsContasPagarid: TIntegerField;
+    sContasPagarnumero_doc: TStringField;
+    sContasPagardescricao: TStringField;
+    cdsContasPagarparcelas: TIntegerField;
+    fmtbcdfldContasPagarvlr_parcela: TFMTBCDField;
+    fmtbcdfldContasPagarvlr_compra: TFMTBCDField;
+    fmtbcdfldContasPagarvlr_abatido: TFMTBCDField;
+    dtfldContasPagardt_compra: TDateField;
+    dtfldContasPagardt_cadastro: TDateField;
+    dtfldContasPagardt_vencto: TDateField;
+    dtfldContasPagardt_pagto: TDateField;
+    sContasPagarstatus: TStringField;
+    ds1: TClientDataSet;
+    IntegerField1: TIntegerField;
+    s1: TStringField;
+    s2: TStringField;
+    IntegerField2: TIntegerField;
+    fmtbcdfld1: TFMTBCDField;
+    fmtbcdfld2: TFMTBCDField;
+    fmtbcdfld3: TFMTBCDField;
+    dtfld1: TDateField;
+    dtfld2: TDateField;
+    dtfld3: TDateField;
+    dtfld4: TDateField;
+    s3: TStringField;
+    dtstprvdr1: TDataSetProvider;
+    DataSet1: TSQLDataSet;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmDados: TdmDados;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

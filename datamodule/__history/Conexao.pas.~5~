@@ -1,0 +1,57 @@
+unit Conexao;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DBXMySQL, Datasnap.Provider, Data.DB,
+  Datasnap.DBClient, Data.SqlExpr, Data.FMTBcd;
+
+type
+  TdmDados = class(TDataModule)
+    ConPariz: TSQLConnection;
+    cdsUsuarios: TClientDataSet;
+    dspUsuarios: TDataSetProvider;
+    dsUsuarios: TSQLDataSet;
+    dsUsuariosid: TIntegerField;
+    sUsuariosnome: TStringField;
+    sUsuarioslogin: TStringField;
+    sUsuariossenha: TStringField;
+    sUsuariosstatus: TStringField;
+    dtfldUsuariosdt_cadastro: TDateField;
+    cdsUsuariosid: TIntegerField;
+    sUsuariosnome1: TStringField;
+    sUsuarioslogin1: TStringField;
+    sUsuariossenha1: TStringField;
+    sUsuariosstatus1: TStringField;
+    dtfldUsuariosdt_cadastro1: TDateField;
+    ds1: TClientDataSet;
+    IntegerField1: TIntegerField;
+    s1: TStringField;
+    s2: TStringField;
+    s3: TStringField;
+    s4: TStringField;
+    dtfld1: TDateField;
+    dtstprvdr1: TDataSetProvider;
+    dsContasPagar: TSQLDataSet;
+    IntegerField2: TIntegerField;
+    s5: TStringField;
+    s6: TStringField;
+    s7: TStringField;
+    s8: TStringField;
+    dtfld2: TDateField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmDados: TdmDados;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

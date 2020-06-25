@@ -1,0 +1,42 @@
+unit Conexao;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DBXMySQL, Datasnap.Provider, Data.DB,
+  Datasnap.DBClient, Data.SqlExpr, Data.FMTBcd;
+
+type
+  TDataModule1 = class(TDataModule)
+    ConPariz: TSQLConnection;
+    cdsUsuarios: TClientDataSet;
+    dspUsuarios: TDataSetProvider;
+    dsUsuarios: TSQLDataSet;
+    dsUsuariosid: TIntegerField;
+    sUsuariosnome: TStringField;
+    sUsuarioslogin: TStringField;
+    sUsuariossenha: TStringField;
+    sUsuariosstatus: TStringField;
+    dtfldUsuariosdt_cadastro: TDateField;
+    cdsUsuariosid: TIntegerField;
+    sUsuariosnome1: TStringField;
+    sUsuarioslogin1: TStringField;
+    sUsuariossenha1: TStringField;
+    sUsuariosstatus1: TStringField;
+    dtfldUsuariosdt_cadastro1: TDateField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DataModule1: TDataModule1;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.
